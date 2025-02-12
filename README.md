@@ -39,8 +39,22 @@ Effortlessly transcribe audio to text in real time with on-device processing usi
 ## ⚙️ How It Works  
 
 1. **Model Selection:**  
-   - Select a preloaded Whisper model from the settings menu.  
-   - Supported models include `tiny`, `base`, `small`, `medium`, and `large`.  
+   
+- Select a preloaded Whisper model from the settings menu.
+- Supported models include tiny, base, small, medium, and large.
+- You can download models from below given link and after downloading, place them inside RealTimeTranscription/Resource/models.
+
+*Available Models*
+ 1. **tiny** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.bin) (F16, 75 MiB)  
+ 2. **tiny-q5_1** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny-q5_1.bin) (31 MiB)  
+ 3. **tiny-q8_0** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny-q8_0.bin) (42 MiB)  
+ 4. **tiny.en** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.en.bin) (F16, 75 MiB)  
+ 5. **tiny.en-q5_1** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.en-q5_1.bin) (31 MiB)  
+ 6. **tiny.en-q8_0** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.en-q8_0.bin) (42 MiB)  
+ 7. **base-q5_1** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base-q5_1.bin) (57 MiB)  
+ 8. **base-q8_0** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base-q8_0.bin) (78 MiB)  
+ 9. **base.en-q5_1** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.en-q5_1.bin) (57 MiB)  
+ 10. **base.en-q8_0** - [Download](https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.en-q8_0.bin) (78 MiB)  
 
 2. **Transcription:**  
    - Tap the record button to start transcribing in real time.  
