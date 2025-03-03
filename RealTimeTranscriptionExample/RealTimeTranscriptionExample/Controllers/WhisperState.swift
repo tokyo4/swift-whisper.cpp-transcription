@@ -17,6 +17,7 @@ private let THREAD_BASIC_INFO = thread_flavor_t(5)
 
 // Add this enum at the top of the file
 enum WhisperModel: String, CaseIterable, Identifiable {
+    /*
     case base_q5_1 = "ggml-base-q5_1"
     case base_q8_0 = "ggml-base-q8_0"
     case base_en_q5_1 = "ggml-base.en-q5_1"
@@ -27,11 +28,14 @@ enum WhisperModel: String, CaseIterable, Identifiable {
     case tiny_en = "ggml-tiny.en"
     case tiny_en_q5_1 = "ggml-tiny.en-q5_1"
     case tiny_en_q8_0 = "ggml-tiny.en-q8_0"
+     */
+    case large_v3_q5_0 = "ggml-large-v3-turbo-q5_0"
     
     var id: String { rawValue }
     
     var description: String {
         switch self {
+            /*
         case .base_q5_1: return "Base (Q5_1)"
         case .base_q8_0: return "Base (Q8_0)"
         case .base_en_q5_1: return "Base English (Q5_1)"
@@ -42,6 +46,8 @@ enum WhisperModel: String, CaseIterable, Identifiable {
         case .tiny_en: return "Tiny English"
         case .tiny_en_q5_1: return "Tiny English (Q5_1)"
         case .tiny_en_q8_0: return "Tiny English (Q8_0)"
+             */
+        case .large_v3_q5_0: return "Large (Q5_0)"
         }
     }
 }
@@ -81,7 +87,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     @Published var transcriptionProgress: Double = 0.0
     
     // Add these properties
-    @Published var selectedModel: WhisperModel = .tiny_en_q5_1
+    @Published var selectedModel: WhisperModel = .large_v3_q5_0
     @Published var isModelLoading = false
     
     // Update modelUrl to use selected model
