@@ -28,9 +28,10 @@ enum WhisperModel: String, CaseIterable, Identifiable {
     case tiny_en = "ggml-tiny.en"
     case tiny_en_q5_1 = "ggml-tiny.en-q5_1"
     case tiny_en_q8_0 = "ggml-tiny.en-q8_0"
-     */
     case large_v3_q5_0 = "ggml-large-v3-turbo-q5_0"
-    
+     */
+    case small_q8_0 = "ggml-small-q8_0"
+
     var id: String { rawValue }
     
     var description: String {
@@ -46,8 +47,9 @@ enum WhisperModel: String, CaseIterable, Identifiable {
         case .tiny_en: return "Tiny English"
         case .tiny_en_q5_1: return "Tiny English (Q5_1)"
         case .tiny_en_q8_0: return "Tiny English (Q8_0)"
-             */
         case .large_v3_q5_0: return "Large (Q5_0)"
+             */
+        case .small_q8_0: return "small (Q8_0)"
         }
     }
 }
@@ -87,7 +89,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     @Published var transcriptionProgress: Double = 0.0
     
     // Add these properties
-    @Published var selectedModel: WhisperModel = .large_v3_q5_0
+    @Published var selectedModel: WhisperModel = .small_q8_0
     @Published var isModelLoading = false
     
     // Update modelUrl to use selected model
